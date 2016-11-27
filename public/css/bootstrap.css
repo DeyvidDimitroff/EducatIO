@@ -3838,7 +3838,7 @@ tbody.collapse.in {
 .input-group-lg > .input-group-btn > .btn {
   height: 46px;
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 58px;
   line-height: 1.3333333;
   border-radius: 6px;
 }
@@ -3903,7 +3903,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #555;
   text-align: center;
   background-color: #eee;
-  border: 1px solid #ccc;
+  border: 0.5px solid #ccc;
   border-radius: 4px;
 }
 .input-group-addon.input-sm {
