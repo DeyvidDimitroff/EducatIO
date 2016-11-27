@@ -22,6 +22,7 @@ router.post('/register', function(req, res){
 	var username = req.body.username;
 	var password = req.body.password;
 	var password2 = req.body.password2;
+	var country = req.body.country;
 	var gender = req.body.gender;
 
 	// Validation
@@ -45,7 +46,8 @@ router.post('/register', function(req, res){
 			email: email,
 			username: username,
 			password: password,
-			gender: gender
+			gender: gender,
+			coutry:country
 		});
 
 		User.createUser(newUser, function(err, user){

@@ -16,6 +16,9 @@ var UserSchema = mongoose.Schema({
 	name: {
 		type: String
 	},
+	country: {
+		type: String
+	},
 	gender: {
 		type: String
 	}

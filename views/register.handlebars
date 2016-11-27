@@ -4,7 +4,7 @@
 {{/each}} {{/if}}
 <form method="post" action="/users/register">
   <div class="form-group">
-    <label>Name</label>
+    <label>Full name</label>
     <input type="text" class="form-control" placeholder="Name" name="name">
   </div>
   <div class="form-group">
@@ -24,14 +24,19 @@
     <input type="password" class="form-control" placeholder="Password" name="password2">
   </div>
   <div class="form-group ">
-    <label>Gender</label>
-    <span class="input-group-addon">
+    <div class="form-group">
+      <label>Country</label>
+      <input type="text" class="form-control" placeholder="Country" name="country">
+    </div>
+    <div class="form-group ">
+      <label>Gender</label>
+      <span class="input-group-addon">
   <input type="radio" name="gender" id="inlineRadio1" value="Male" > Male
  </span>
-    <span class="input-group-addon">
+      <span class="input-group-addon">
   <input type="radio" name="gender" id="inlineRadio2" value="Female"> Female
 </span>
-  </div>
-  
-  <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+
+    <button type="submit" class="btn btn-default">Submit</button>
 </form>
