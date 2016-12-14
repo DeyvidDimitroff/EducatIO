@@ -16,13 +16,12 @@
   <div class="container">
     <div class="header clearfix">
       <nav>
-        <ul class="nav nav-pills pull-right">
+        <ul class="nav nav-pills pull-right " >
           {{#if user}}
           <!-- hide/show buttons if user is logged in or logged out -->
           <li role="presentation"><a href="/">Home</a></li>
           <li role="presentation"><a href="/users/logout">Logout</a></li>
           {{else}}
-          <li role="presentation"><a href="/users/login">Login</a></li>
           <li role="presentation"><a href="/users/register">Register</a></li>
           {{/if}}
         </ul>
@@ -42,6 +41,7 @@
         <div class="alert alert-danger">{{error}}</div>
         {{/if}} {{{body}}}
       </div>
+
 
       <footer class="footer">
         You can find us at

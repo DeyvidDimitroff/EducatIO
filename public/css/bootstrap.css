@@ -1096,6 +1096,10 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
+.logo-image{
+  height: 70px;
+  width: 100px;
+}
 a {
   color: #337ab7;
   text-decoration: none;
@@ -1410,7 +1414,7 @@ a.bg-danger:focus {
 .page-header {
   padding-bottom: 9px;
   margin: 40px 0 20px;
-  border-bottom: 1px solid #eee;
+  
 }
 ul,
 ol {
@@ -1612,6 +1616,9 @@ pre code {
   margin-right: -15px;
   margin-left: -15px;
 }
+.row .thumbnail img{
+  height: 20%;
+}
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
@@ -1803,8 +1810,10 @@ pre code {
     width: 41.66666667%;
   }
   .col-sm-4 {
-    width: 33.33333333%;
+    width: 23.33333333%;
+    margin-left: 10%;
   }
+  
   .col-sm-3 {
     width: 25%;
   }
@@ -2548,7 +2557,7 @@ output {
 }
 .form-control {
   display: block;
-  width: 100%;
+  width: 30%;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
@@ -2564,6 +2573,10 @@ output {
        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
           transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
+.login .form-control{
+ margin-left: 35%;
+}
+
 .form-control:focus {
   border-color: #66afe9;
   outline: 0;
@@ -2630,6 +2643,19 @@ input[type="search"] {
 }
 .form-group {
   margin-bottom: 15px;
+}
+.form-group label{
+  margin-left: 35%;
+}
+.form-group:nth-child(1) > label {
+   
+   margin-top: 4%;
+}
+.login button{
+  width: 10%;
+  margin-left: 35%;
+  margin-bottom: 10%;
+  min-width: 80px;
 }
 .radio,
 .checkbox {
@@ -3894,6 +3920,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   width: 1%;
   white-space: nowrap;
   vertical-align: middle;
+  
 }
 .input-group-addon {
   padding: 6px 12px;
@@ -3950,9 +3977,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   font-size: 0;
   white-space: nowrap;
+  
 }
 .input-group-btn > .btn {
   position: relative;
+  height: 34px;
+  
 }
 .input-group-btn > .btn + .btn {
   margin-left: -1px;

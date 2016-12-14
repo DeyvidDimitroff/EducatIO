@@ -32,9 +32,9 @@ body {
 }
 
 /* Customize container */
-@media (min-width: 768px) {
+@media (min-width: 568px) {
   .container {
-    max-width: 730px;
+    max-width: 1920px;
   }
 }
 .container-narrow > hr {
@@ -81,6 +81,7 @@ body {
 .page-header{
     margin-top: 0;
 }
+
 
 .footer{
     margin-top: 40;

@@ -1,0 +1,35 @@
+{
+  "name": "educatio",
+  "version": "1.0.0",
+  "description": "NOIT 2017 Project by Deyvid Dimitrov and Leny Yordanov",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeyvidDimitroff/EducatIO.git"
+  },
+  "author": "Deyvid Dimitrov",
+  "license": "ISC",
+    "dependencies": {
+    "bcryptjs": "*", 
+    "body-parser": "*", 
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1", 
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*", 
+    "express-session": "*", 
+    "express-validator": "*", 
+    "mongodb": "*",
+    "mongoose": "*", 
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/DeyvidDimitroff/EducatIO/issues"
+  },
+  "homepage": "https://github.com/DeyvidDimitroff/EducatIO#readme"
+}
