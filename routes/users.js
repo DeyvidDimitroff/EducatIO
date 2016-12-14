@@ -46,8 +46,8 @@ router.post('/register', function(req, res){
 			email: email,
 			username: username,
 			password: password,
-			gender: gender,
-			coutry:country
+			country: country,
+			gender: gender
 		});
 
 		User.createUser(newUser, function(err, user){
