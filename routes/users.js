@@ -20,6 +20,11 @@ router.get('/stream', function(req, res){
     res.render('stream');
 });
 
+//Chat
+router.get('/chat', function(req, res){
+    res.render('chat');
+});
+
 // Register User
 router.post('/register', function(req, res){
 	var name = req.body.name;
