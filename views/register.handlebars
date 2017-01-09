@@ -1,8 +1,11 @@
-<h2 class="page-header">Register</h2>
+
 {{#if errors}} {{#each errors}}
 <div class="alert alert-danger">{{msg}}</div>
 {{/each}} {{/if}}
-<form method="post" action="/users/register">
+<form method="post" class="reg-form" action="/users/register">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-5">
   <div class="form-group">
     <label>Full name</label>
     <input type="text" class="form-control" placeholder="Name" name="name">
@@ -23,20 +26,52 @@
     <label>Confirm Password</label>
     <input type="password" class="form-control" placeholder="Password" name="password2">
   </div>
-  <div class="form-group ">
-    <div class="form-group">
+  <div class="form-group">
       <label>Country</label>
       <input type="text" class="form-control" placeholder="Country" name="country">
-    </div>
-    <div class="form-group ">
-      <label>Gender</label>
-      <span class="input-group-addon">
-  <input type="radio" name="gender" id="inlineRadio1" value="Male" > Male
- </span>
-      <span class="input-group-addon">
-  <input type="radio" name="gender" id="inlineRadio2" value="Female"> Female
-</span>
-    </div>
+  </div>
+  
+  </div>
 
-    <button type="submit" class="btn btn-default">Submit</button>
+    <div class="col-sm-3">    
+  <div class="form-group">
+	  <h2>Gender</h2>
+    <ul>
+      <li>
+        <input type="radio" id="gender-m" name="gender">
+       <label for="gender-m">Male</label>
+       <div class="check"><div class="inside"></div></div>
+     </li>
+     <li>
+        <input type="radio" id="gender-f" name="gender">
+        <label for="gender-f">Female</label>
+        <div class="check"><div class="inside"></div></div>
+     </li>
+   </ul>
+  </div>
+
+  <div class="form-group">
+	  <h2>Occupation</h2>
+    <ul>
+      <li>
+        <input type="radio" id="s-option" name="occupation">
+       <label for="s-option">Student</label>
+       <div class="check"><div class="inside"></div></div>
+     </li>
+     <li>
+        <input type="radio" id="t-option" name="occupation">
+        <label for="t-option">Teacher</label>
+        <div class="check"><div class="inside"></div></div>
+     </li>
+   </ul>
+  </div>
+    
+    </div>
+</div>
+ <div class="row">
+<div class="col-sm-12">
+    <button type="submit" class="ghost-button">Submit</button>
+</div>
+</div>
+</div>
 </form>

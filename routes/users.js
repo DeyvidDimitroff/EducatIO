@@ -24,6 +24,7 @@ router.post('/register', function(req, res){
 	var password2 = req.body.password2;
 	var country = req.body.country;
 	var gender = req.body.gender;
+	var occupation = req.body.occupation;
 
 	// Validation
 	req.checkBody('name', 'Name is required').notEmpty();
@@ -33,6 +34,8 @@ router.post('/register', function(req, res){
 	req.checkBody('password', 'Password is required').notEmpty();
 	req.checkBody('password2', 'Passwords do not match').equals(req.body.password);
 	req.checkBody('gender', 'Gender is required').notEmpty();
+	req.checkBody('occupation', 'Occupation is required').notEmpty();
+	
 
 	var errors = req.validationErrors();
 
@@ -47,7 +50,8 @@ router.post('/register', function(req, res){
 			username: username,
 			password: password,
 			country: country,
-			gender: gender
+			gender: gender,
+			occupation: occupation
 		});
 
 		User.createUser(newUser, function(err, user){

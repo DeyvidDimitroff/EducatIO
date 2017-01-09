@@ -1,65 +1,103 @@
-
-<div class="row">
-<div class="col-sm-8">
-    
-<h2 class="page-header">Welcome<img class="logo-image" src="/logo.png"> </h2>
-
-</div>
-
 <!-- SearchBar -->
-  <div class="col-sm-4">
-    <div class="input-group">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-      <input type="text" class="form-control" placeholder="Search for...">
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="clearfix visible-xs"></div>
+    <div class="col-xs-12 col-sm-8">
+      <div>
+        <img src="/LogoS.png" alt="...">
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+         </button>
+       </span>
+       <input type="text" class="form-control" placeholder="Search for...">
+      </div><!-- /input-group -->
+    </div>
+  </div>
+</div>
 
 <!-- Login -->
-<form class="login" method="post" action="/users/login">
-  <div class="form-group">
-    <label>Username</label>
-    <input type="text" class="form-control" name="username" placeholder="Username">
-  </div>
-  <div class="form-group">
-    <label>Password</label>
-    <input type="password" class="form-control" name="password" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
+<div class="container-fluid">
+  <div class="row">
+    <div class="clearfix visible-xs"></div>
+    <form class="login" method="post" action="/users/login">
+      <div class="form-group">
+       <label>Username</label>
+      <input type="text" class="form-control" name="username" placeholder="Username">
+     </div>
+     <div class="form-group">
+       <label>Password</label>
+       <input type="password" class="form-control" name="password" placeholder="Password">
+     </div>
+    <button type="submit" class="ghost-button">Submit</button>
+   </form>
+  </div> <!-- Row -->
+</div> <!-- Login -->
 
-<!-- Recomended -->
-<div class="row">
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="/prof1.jpg" alt="...">
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-      </div>
+<!-- 4 Subjects -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="clearfix visible-xs"></div>
+     <h2> You Choose </h2>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <img src="/mini-Icon.png" alt="...">
+        <p>*Insert subject N1*</p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <img src="/mini-Icon.png" alt="...">
+        <p>*Insert subject N2*</p>
     </div>
   </div>
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="/prof2.jpg" alt="...">
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+   <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <img src="/mini-Icon.png" alt="...">
+        <p>*Insert subject N3*</p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <img src="/mini-Icon.png" alt="...">
+        <p>*Insert subject N4*</p>
+    </div>
+  </div> <!-- Row -->
+</div> <!-- Container -->
+
+<!-- Best Teacher -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="clearfix visible-xs"></div>
+     <h2> Favourite Teacher </h2>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <div class="thumbnail">
+        <img src="/prof1.jpg" alt="...">
       </div>
     </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
+    </div>
+  </div> <!-- Row -->
+</div> <!-- Container -->
+
+ <!-- Favourite Subject -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="clearfix visible-xs"></div>
+     <h2> Most Popular Subject </h2>
   </div>
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="/prof3.jpg" alt="...">
-      <div class="caption">
-        <h3>Thumbnail label</h3>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <div class="thumbnail">
+        <img src="/prof1.jpg" alt="...">
       </div>
     </div>
-  </div>
-</div>
+  </div> <!-- Row -->
+</div> <!-- Container -->

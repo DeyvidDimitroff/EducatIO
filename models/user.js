@@ -21,6 +21,9 @@ var UserSchema = mongoose.Schema({
 	},
 	gender: {
 		type: String
+	},
+	occupation: {
+		type: String
 	}
 });
 
