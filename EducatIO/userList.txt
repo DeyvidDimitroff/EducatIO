@@ -1,8 +1,0 @@
-user: dave
-pass: dave
-
-user: test1
-pass: test1
-
-user: prezidenta
-pass: prezidenta

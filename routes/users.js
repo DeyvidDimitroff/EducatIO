@@ -15,6 +15,11 @@ router.get('/login', function(req, res){
     res.render('login');
 });
 
+//Stream
+router.get('/stream', function(req, res){
+    res.render('stream');
+});
+
 // Register User
 router.post('/register', function(req, res){
 	var name = req.body.name;

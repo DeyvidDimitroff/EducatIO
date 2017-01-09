@@ -10,6 +10,10 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <script src="../../jwplayer/jwplayer/jwplayer.js"></script>
+  <script>jwplayer.key="2EREdE3E2jxZVCBJtebYEvK29ET87ByyPHX5hg=="</script>
+  <script src="../../jwplayer/jwplayer/jwplayer.flash.swf"></script>
 </head>
 
 <body>
@@ -26,6 +30,7 @@
              {{#if user}}
               <!-- hide/show buttons if user is logged in or logged out -->
               <li role="presentation"><a href="/users/logout">Logout</a></li>
+              <li role="presentation"><a href="/users/stream">Stream</a></li>
               {{else}}
               <li role="presentation"><a href="/users/register">Register</a></li>
               {{/if}}
@@ -51,7 +56,6 @@
       </div>
     </div>
   </div>
-<!-- github mrazqta -->
       <footer class="footer">
         <div class="container-fluid">
           You can find us at
