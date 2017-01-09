@@ -13,8 +13,7 @@ Used technologies:
 +Streaming:
     nginx server + rtmp module, hosted on Linux virtual machine
     JWPlayer
-
-    *For capture: OBS
+    For capture: OBS
 
 +Chat:
     Socket.io
@@ -24,3 +23,10 @@ Used technologies:
 
 +Backend
     node.js, MongoDB, Passport.js
+
+
+To install:
+
+1.   npm install
+2.   run mongod
+3.   node app
