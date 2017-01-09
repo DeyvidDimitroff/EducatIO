@@ -8,3 +8,19 @@ Mentor: Stefan Vasilev
 
 //TODO: ADD DESCRIPTION
 
+Used technologies:
+
++Streaming:
+    nginx server + rtmp module, hosted on Linux virtual machine
+    JWPlayer
+
+    *For capture: OBS
+
++Chat:
+    Socket.io
+
++Frontend:
+    HTML, CSS, JavaScript, jQuery, Handlebars
+
++Backend
+    node.js, MongoDB, Passport.js
