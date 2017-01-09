@@ -12,9 +12,7 @@ Used technologies:
 
 +Streaming:
     nginx server + rtmp module, hosted on Linux virtual machine
-    
     JWPlayer
-    
     For capture: OBS
 
 +Chat:
