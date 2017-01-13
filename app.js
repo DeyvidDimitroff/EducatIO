@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Set Static Folder
-app.use(express.static(path.join(__dirname, 'public'))); //put stilesheets, images, jquery and stuff accessible for the browser
+app.use(express.static(path.join(__dirname, 'public'))); //put stilesheets, jwplayer public files, images, jquery and stuff accessible for the browser
 
 // Express Session
 app.use(session({
