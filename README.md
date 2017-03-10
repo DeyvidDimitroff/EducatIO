@@ -1,32 +1,37 @@
 # EducatIO
 
-NOIT 2017 Project 
+##NOIT 2017 Project 
 
-By Deyvid Dimitrov and Leny Yordanov
+##By Deyvid Dimitrov and Leny Yordanov
 
-Mentor: Stefan Vasilev
+##Mentors: Stefan Vasilev and Petar Ivanov
 
-//TODO: ADD DESCRIPTION
 
 Used technologies:
 
-+Streaming:
-    nginx server + rtmp module, hosted on Linux virtual machine
-    JWPlayer
-    For capture: OBS
+1. Streaming:
+    -nginx server + rtmp module, hosted on Linux virtual machine
+    -JWPlayer
+    -For capture: OBS
 
-+Chat:
-    Socket.io
+2. Chat:
+    -Socket.io
 
-+Frontend:
-    HTML, CSS, JavaScript, jQuery, Handlebars
+3. Frontend:
+    -HTML, CSS, JavaScript, jQuery, Handlebars
 
-+Backend
-    node.js, MongoDB, Passport.js
+4. Backend
+    -node.js, MongoDB, Mongoose, Express, Passport.js
 
 
 To install:
-
-1.   npm install
-2.   run mongod
-3.   node app
+```
+   npm install
+   
+   run mongod
+   
+   run mongo
+    >>>use loginapp
+    
+   node app
+```
