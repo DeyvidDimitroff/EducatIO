@@ -1,77 +1,101 @@
-
-{{#if errors}} {{#each errors}}
+ {{#if errors}} {{#each errors}}
 <div class="alert alert-danger">{{msg}}</div>
 {{/each}} {{/if}}
 <form method="post" class="reg-form" action="/users/register">
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-5">
-  <div class="form-group">
-    <label>Full name</label>
-    <input type="text" class="form-control" placeholder="Name" name="name">
-  </div>
-  <div class="form-group">
-    <label>Username</label>
-    <input type="text" class="form-control" placeholder="Username" name="username">
-  </div>
-  <div class="form-group">
-    <label>Email</label>
-    <input type="email" class="form-control" placeholder="Email" name="email">
-  </div>
-  <div class="form-group">
-    <label>Password</label>
-    <input type="password" class="form-control" placeholder="Password" name="password">
-  </div>
-  <div class="form-group">
-    <label>Confirm Password</label>
-    <input type="password" class="form-control" placeholder="Password" name="password2">
-  </div>
-  <div class="form-group">
-      <label>Country</label>
-      <input type="text" class="form-control" placeholder="Country" name="country">
-  </div>
-  
-  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="form-group">
+          <label>Пълно име</label>
+          <input type="text" class="form-control" placeholder="Пълно име" name="name">
+        </div>
+        <div class="form-group">
+          <label>Потребителско име</label>
+          <input type="text" class="form-control" placeholder="Потребителско име" name="username">
+        </div>
+        <div class="form-group">
+          <label>Парола</label>
+          <input type="password" class="form-control" placeholder="Парола" name="password">
+        </div>
+        <div class="form-group">
+          <label>Потвърди паролата</label>
+          <input type="password" class="form-control" placeholder="Потвържди паролата" name="password2">
+        </div>
+        <div class="form-group">
+          <label>Държава</label>
+          <input type="text" class="form-control" placeholder="Държава" name="country">
+        </div>
 
-    <div class="col-sm-3">    
-  <div class="form-group">
-	  <h2>Gender</h2>
-    <ul>
-      <li>
-        <input type="radio" id="gender-m" name="gender">
-       <label for="gender-m">Male</label>
-       <div class="check"><div class="inside"></div></div>
-     </li>
-     <li>
-        <input type="radio" id="gender-f" name="gender">
-        <label for="gender-f">Female</label>
-        <div class="check"><div class="inside"></div></div>
-     </li>
-   </ul>
-  </div>
+      </div>
 
-  <div class="form-group">
-	  <h2>Occupation</h2>
-    <ul>
-      <li>
-        <input type="radio" id="s-option" name="occupation">
-       <label for="s-option">Student</label>
-       <div class="check"><div class="inside"></div></div>
-     </li>
-     <li>
-        <input type="radio" id="t-option" name="occupation">
-        <label for="t-option">Teacher</label>
-        <div class="check"><div class="inside"></div></div>
-     </li>
-   </ul>
-  </div>
-    
+      <div class="col-sm-3">
+      
+
+        <div class="form-group">
+          <h2>Ученик или Учител</h2>
+          <ul>
+            <li>
+              <input type="radio" id="s-option" name="occupation" value="student">
+              <label for="s-option">Ученик</label>
+              <div class="check">
+                <div class="inside"></div>
+              </div>
+            </li>
+            <li>
+              <input type="radio" id="t-option" name="occupation" value="teacher">
+              <label for="t-option">Учител</label>
+              <div class="check">
+                <div class="inside"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <p id="show-me-p">What education do you have?</p>
+        <textarea id="show-me-text" class="form-control" rows="4"></textarea>
+
+        <p id="show-me-second-p">What is your current education?</p>
+        <textarea id="show-me-second-text" class="form-control" rows="4"></textarea>
+      </div>
+
     </div>
-</div>
- <div class="row">
-<div class="col-sm-12">
-    <button type="submit" class="ghost-button">Submit</button>
-</div>
-</div>
-</div>
+    <div class="row">
+      <div class="col-sm-12">
+        <button type="submit" class="ghost-button">Изпращане</button>
+      </div>
+    </div>
+  </div>
 </form>
+
+<script>
+  $(document).ready(function () {
+    $('input[type="radio"]').click(function () {
+      if ($(this).attr('id') == 's-option') {
+        $('#show-me-p').show();
+        $('#show-me-text').show();
+        $('#show-me-text').val("");
+
+      } else {
+        $('#show-me-p').hide();
+        $('#show-me-text').hide();
+        $('#show-me-text').val("");
+      }
+    });
+  });
+  $(document).ready(function () {
+    $('input[type="radio"]').click(function () {
+      if ($(this).attr('id') == 't-option') {
+        $('#show-me-second-p').show();
+        $('#show-me-second-text').show();
+        $('#show-me-second-text').val("");
+
+      } else {
+        $('#show-me-second-p').hide();
+        $('#show-me-second-text').hide();
+        $('#show-me-second-text').val("");
+      }
+    });
+  });
+</script>

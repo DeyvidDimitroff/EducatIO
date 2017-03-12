@@ -1,0 +1,36 @@
+<!-- Page Content -->
+{{#if errors}} {{#each errors}}
+<div class="alert alert-danger">{{msg}}</div>
+{{/each}} {{/if}}
+<form method="post" class="reg-form" action="/users/update">
+
+    <div class="container-fluid">
+        <!-- Portfolio Item Heading -->
+        <div class="row">
+            <div class="col-md-8">
+                <div class="form-group">
+                    <label>Име на курса</label>
+                    <input type="text" class="form-control" placeholder="Име на курса" name="title">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Portfolio Item Row -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <textarea id="show-me-text" class="form-control" rows="5" placeholder="Напишете кратко съдържание за курса " name="longDescription"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="ghost-button">Изпращане</button>
+            </div>
+        </div>
+    </div>
+    
+</form>
+<!-- /.row -->

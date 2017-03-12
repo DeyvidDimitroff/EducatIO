@@ -1,19 +1,30 @@
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>EducatIO</title>
-  <link rel="stylesheet" href="/css/bootstrap.css" />
-  <link rel="stylesheet" href="/css/style.css" />
-  <link rel="stylesheet" href="/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
 
-  <script src="/js/bootstrap.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $.extend($.expr[":"], {
+      "containsIN": function (elem, i, match, array) {
+        return (elem.textContent || elem.innerText || "").toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+      }
+    });
+  </script>
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
-  <script src="../jwplayer/jwplayer/jwplayer.js"></script>
-  <script>jwplayer.key="2EREdE3E2jxZVCBJtebYEvK29ET87ByyPHX5hg=="</script>
-  <script src="../jwplayer/jwplayer/jwplayer.flash.swf"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/holder.js"></script>
+
+<script src="/jwplayer/jwplayer/jwplayer.js"></script>
+<script src="/js/jwplayer.flash.swf"></script>
+<script>jwplayer.key = "2EREdE3E2jxZVCBJtebYEvK29ET87ByyPHX5hg=="</script>
+
 </head>
 
 <body>
@@ -21,19 +32,23 @@
     <div class="header clearfix">
       <div class="row">
         <div class="clearfix visible-xs"></div>
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-xs-6 col-sm-5">
           <h3 class="text-muted"><a href="/">EducatIO<img class="logo-image" src="/logo.png"></a></h3>
-        </div> 
-        <div class="col-xs-12 col-sm-6"> 
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
           <nav>
-            <ul class="nav nav-pills pull-right " >
-             {{#if user}}
+            <ul class="nav nav-pills pull-right ">
+              {{#if user}}
               <!-- hide/show buttons if user is logged in or logged out -->
-              <li role="presentation"><a href="/users/logout">Logout</a></li>
-              <li role="presentation"><a href="/users/stream">Stream</a></li>
-              <li role="presentation"><a href="/users/chat">Chat</a></li>
+
+              {{#isTeacher user}}
+              <li role="presentation"><a href="/courses/course">Моят курс</a></li>
+              {{/isTeacher}}
+              <li role="presentation"><a href="/users/profile/{{user.username}}">{{user.username}}</a></li>
+              <li role="presentation"><a href="/users/logout">Изход</a></li>
               {{else}}
-              <li role="presentation"><a href="/users/register">Register</a></li>
+              <li role="presentation"><a href="/users/register">Регистрация</a></li>
               {{/if}}
             </ul>
           </nav>
@@ -57,13 +72,14 @@
       </div>
     </div>
   </div>
-      <footer class="footer">
-        <div class="container-fluid">
-          You can find us at
-          <a href="https://github.com/DeyvidDimitroff/EducatIO" <i class="fa fa-github" aria-hidden="true"></i>
-          </a>
-        </div>
-      </footer>
+
+  <footer class="footer">
+    <div class="container-fluid">
+      Може да ни намерите в
+      <a href="https://github.com/DeyvidDimitroff/EducatIO" <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
+    </div>
+  </footer>
 
 </body>
 

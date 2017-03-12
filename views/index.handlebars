@@ -1,103 +1,124 @@
 <!-- SearchBar -->
 <div class="container-fluid">
   <div class="row">
-    <div class="clearfix visible-xs"></div>
-    <div class="col-xs-12 col-sm-8">
-      <div>
-        <img src="/LogoS.png" alt="...">
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <div class="input-group">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-         </button>
-       </span>
-       <input type="text" class="form-control" placeholder="Search for...">
-      </div><!-- /input-group -->
-    </div>
   </div>
 </div>
 
 <!-- Login -->
 <div class="container-fluid">
+  {{#if user}}
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <input id="search-teacher" type="text" class="form-control" placeholder="Потърсете за учители..">
+      </div>
+      <!-- /input-group -->
+    </div>
+    <!-- /.col-lg-6 -->
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group text-center">
+        <ul class="list-group" id="all-teachers">
+          {{#each teachers}}
+          <li class="list-group-item"><a href="/users/profile/{{username}}">{{name}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="/js/user-utils.js"></script>
+  {{else}}
   <div class="row">
     <div class="clearfix visible-xs"></div>
     <form class="login" method="post" action="/users/login">
       <div class="form-group">
-       <label>Username</label>
-      <input type="text" class="form-control" name="username" placeholder="Username">
-     </div>
-     <div class="form-group">
-       <label>Password</label>
-       <input type="password" class="form-control" name="password" placeholder="Password">
-     </div>
-    <button type="submit" class="ghost-button">Submit</button>
-   </form>
-  </div> <!-- Row -->
-</div> <!-- Login -->
+        <label>Потребителско име</label>
+        <input type="text" class="form-control" name="username" placeholder="Username">
+      </div>
+      <div class="form-group">
+        <label>Парола</label>
+        <input type="password" class="form-control" name="password" placeholder="Password">
+      </div>
+      <button type="submit" class="ghost-button">Изпращане</button>
+    </form>
+  </div>
+  <!-- Row -->
+  {{/if}}
+</div>
+<!-- Login -->
 
 <!-- 4 Subjects -->
 <div class="container-fluid">
   <div class="row">
     <div class="clearfix visible-xs"></div>
-     <h2> You Choose </h2>
+    <h2> Препоръчани теми </h2>
   </div>
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4">
-        <img src="/mini-Icon.png" alt="...">
-        <p>*Insert subject N1*</p>
+      <img src="/sub1.png" alt="...">
+      <p>Математика</p>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4">
-        <img src="/mini-Icon.png" alt="...">
-        <p>*Insert subject N2*</p>
+      <img src="/sub2.png" alt="...">
+      <p>История</p>
     </div>
   </div>
-   <div class="row">
+  <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4">
-        <img src="/mini-Icon.png" alt="...">
-        <p>*Insert subject N3*</p>
+      <img src="/sub3.png" alt="...">
+      <p>Изкуство</p>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4">
-        <img src="/mini-Icon.png" alt="...">
-        <p>*Insert subject N4*</p>
+      <img src="/sub4.png" alt="...">
+      <p>Компютърни науки</p>
     </div>
-  </div> <!-- Row -->
-</div> <!-- Container -->
+  </div>
+  <!-- Row -->
+</div>
+<!-- Container -->
 
-<!-- Best Teacher -->
+<!-- Best Subject -->
 <div class="container-fluid">
   <div class="row">
     <div class="clearfix visible-xs"></div>
-     <h2> Favourite Teacher </h2>
+    <h2> Ако сте ученик... </h2>
   </div>
   <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <div class="thumbnail">
+        <img src="/English.png" alt="...">
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <p>...и сте твърде заети с извън класни дейности, нямате възможност да посещавате занятията във вашето училище или просто
+        искате да научите повече от съучениците си, то тук е вашето място! Изберете преподавателят, който смятате, че ще
+        ви е най-полезен и започнете да попивате от знанията му още сега !
+      </p>
+    </div>
+  </div>
+  <!-- Row -->
+</div>
+<!-- Container -->
+
+<!-- Favourite Teacher -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="clearfix visible-xs"></div>
+    <h2> Ако сте учител... </h2>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <p>...и желаете да подобрите нивото на образованието във вашият град, област дори на цялата страна, то тук е вашето място!
+        Направете си регистрация и с няколко лесни стъпки ще можете да започнете да преподавате!
+      </p>
+    </div>
     <div class="col-xs-12 col-sm-6 col-md-6">
       <div class="thumbnail">
         <img src="/prof1.jpg" alt="...">
       </div>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-6">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
-    </div>
-  </div> <!-- Row -->
-</div> <!-- Container -->
-
- <!-- Favourite Subject -->
-<div class="container-fluid">
-  <div class="row">
-    <div class="clearfix visible-xs"></div>
-     <h2> Most Popular Subject </h2>
   </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-6">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-6">
-      <div class="thumbnail">
-        <img src="/prof1.jpg" alt="...">
-      </div>
-    </div>
-  </div> <!-- Row -->
-</div> <!-- Container -->
+  <!-- Row -->
+</div>
+<!-- Container -->

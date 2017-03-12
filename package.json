@@ -12,21 +12,21 @@
   },
   "author": "Deyvid Dimitrov",
   "license": "ISC",
-    "dependencies": {
-    "bcryptjs": "*", 
-    "body-parser": "*", 
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
     "connect-flash": "*",
-    "cookie-parser": "^1.4.1", 
+    "cookie-parser": "^1.4.1",
     "express": "*",
     "express-handlebars": "*",
-    "express-messages": "*", 
-    "express-session": "*", 
-    "express-validator": "*", 
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
     "mongodb": "*",
-    "mongoose": "*", 
+    "mongoose": "*",
     "passport": "*",
-    "passport-http": "*",
-    "passport-local": "*"
+    "passport-local": "*",
+    "socket.io": "^1.7.3"
   },
   "bugs": {
     "url": "https://github.com/DeyvidDimitroff/EducatIO/issues"
